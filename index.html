@@ -39,4 +39,28 @@
     <p>Forever yours,<br>Rhenielito💕</p>
   </div>
 </body>
+<button id="music-btn" onclick="toggleMusic()" style="padding: 10px 20px; font-size: 18px; border-radius: 10px; background-color: pink; border: none; color: black; margin-bottom: 20px;">
+  Play Music
+</button>
+
+<audio id="bg-music" loop>
+  <source src="PALAGI%20-%20TJxKZ%20LIVE%20SESSIONS.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  function toggleMusic() {
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-btn");
+
+    if (music.paused) {
+      music.play();
+      button.textContent = "Pause Music";
+    } else {
+      music.pause();
+      button.textContent = "Play Music";
+    }
+  }
+</script>
+
 </html>
